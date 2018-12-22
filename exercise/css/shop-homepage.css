@@ -17,4 +17,6 @@ body {
 .q1{
     border: solid 2px black;
   }
-  
+  .filter{
+    filter:blur(8px);
+  }
