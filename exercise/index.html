@@ -49,18 +49,21 @@
                   var i;
                   for (i = 0; i < 12; i++) {    
                      
-                      $("#movie").append(
-                        
-                          '<div class="col-lg-4 col-md-6 mb-4 portfolio-item"><div class="card h-100"><img class ="m1"src="'+
-                            result.data[i].image+'" />'+                                
-                              '<div class="card-body" ><h4 a href="#" class="card-title"><class ="r1">'+
-                          result.data[i].name + '<br></h4>'+
-                          '<br>' + result.data[i].price + ' Bath'+'<br>'+
-
-                          '<div class="card-footer">'+
-                          '<button class=button button2>รายระเอียด/จองที่นั่ง</button>'
-                              +'</div>'+'<div class="detail">'+result.data[i].shot_description+'description'+'<br>'+'</div></div></div>'
+                      $("#movie" ).append('<div class="movieview">'+
+                        '<div class="col-lg-4 col-md-6 mb-4 portfolio-item">'+ 
+                           
+                            '<div class="card h-100">'+
+                             '<img class ="m1"src="'+result.data[i].image+'" />'+                                
+                              '<div class="card-body" ><h4 a href="#" class="card-title"><class ="r1">'+result.data[i].name + '<br></h4>'+
+                                '<br>' + result.data[i].price + ' Bath'+'<br>'+
+                                   '<div class="detail">'+result.data[i].shot_description+'description'+'<br>'+
+                                   '</div>'+
+                              '</div>'+
+                          '</div>'+
+                        '</div>'
                       );
+
+                      
                       // $("#id").append(result.data[i].id);
                       // $("#name").append(result.data[i].name)+'<a id = name></a>';
                       // $("#image").append('<img src =" '+result.data[i].image+'" />');
@@ -73,10 +76,11 @@
                   }
               }
           });
-          // $('#movie').on("click", ".movieview", function () {
-          //       $(this).siblings().hide();
-          //       $(".detail,.fas").show();
-          //   });
+          $('#movie').on("click", ".movieview", function () {
+                $(this).siblings().hide();
+               //   $(".detail").show();
+                
+             });
             // $('.fas')click(function){
             //   $(".movie")
 
