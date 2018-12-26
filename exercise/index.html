@@ -43,21 +43,23 @@
   <body>
     <script>
       $(document).ready(function () {
-        
           $.ajax({
               url: "http://www.mocky.io/v2/5bab559f3000006800a68762",
               success: function (result) {
                   var i;
-                  for (i = 0; i < 12; i++) {     
+                  for (i = 0; i < 12; i++) {    
+                     
                       $("#movie").append(
+                        
                           '<div class="col-lg-4 col-md-6 mb-4 portfolio-item"><div class="card h-100"><img class ="m1"src="'+
-                            result.data[i].image+'" />'+                                  
+                            result.data[i].image+'" />'+                                
                               '<div class="card-body" ><h4 a href="#" class="card-title"><class ="r1">'+
                           result.data[i].name + '<br></h4>'+
                           '<br>' + result.data[i].price + ' Bath'+'<br>'+
+
                           '<div class="card-footer">'+
                           '<button class=button button2>รายระเอียด/จองที่นั่ง</button>'
-                              +'</div></div></div></div>'
+                              +'</div>'+'<div class="detail">'+result.data[i].shot_description+'description'+'<br>'+'</div></div></div>'
                       );
                       // $("#id").append(result.data[i].id);
                       // $("#name").append(result.data[i].name)+'<a id = name></a>';
@@ -71,7 +73,14 @@
                   }
               }
           });
+          // $('#movie').on("click", ".movieview", function () {
+          //       $(this).siblings().hide();
+          //       $(".detail,.fas").show();
+          //   });
+            // $('.fas')click(function){
+            //   $(".movie")
 
+            // }
       });
   </script>
 
@@ -157,6 +166,10 @@
             </a>
           </div>
           <!-- แสดงค่าใน loop  -->
+
+
+
+
           <a id="movie" class="row" > </a>
  
 

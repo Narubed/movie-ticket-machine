@@ -53,3 +53,6 @@ body {
     .r1 {
       margin: 20px 0 0 0;
   } 
+  .detail{
+    display: none;
+  }
