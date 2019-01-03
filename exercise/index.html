@@ -50,17 +50,18 @@
                   for (i = 0; i < 12; i++) {    
                      
                       $("#movie" ).append('<div class="movieview">'+
-                        '<div class="col-lg-4 col-md-6 mb-4">'+ 
-                           
-                            '<div class="card h-100">'+
-                             '<img class ="m1"src="'+result.data[i].image+'" />'+                                
-                              '<div class="card-body" ><h4 a href="#" class="card-title"><class ="r1">'+result.data[i].name + '<br></h4>'+
-                                '<br>' + result.data[i].price + ' Bath'+'<br>'+
-                                   '<div class="detail">'+result.data[i].shot_description+'description'+'<br>'+
-                                   '</div>'+
-                              '</div>'+
-                          '</div>'+
-                        '</div>'
+                      
+                          '<div class="card img">'+
+                             '<img class ="img1"src="'+result.data[i].image+'" />'+'</div>'+
+                             '<div class="card name">'+
+                             '<class ="name">'+result.data[i].name +'</div>'+
+                             '<div class="card price">'+
+                             '<class ="price">'+result.data[i].price+'</div>'+
+                             '<div class="card shot_description">'+
+                             '<class ="shot_description">'+result.data[i].shot_description+'</div>'+
+                             '<div class="card now_showing">'+
+                             '<class ="now_showing">'+result.data[i].now_showing+'</div>'+'</div>' 
+                             
                       );
 
                       
@@ -173,8 +174,8 @@
 
 
 
-
-          <a id="movie" class="row" > </a>
+          <div class="col-lg-4 col-md-6 mb-4">
+          <a id="movie" class="row" > </a></div>
  
 
             <!-- <div class="col-lg-4 col-md-6 mb-4">

@@ -37,7 +37,7 @@
                 var i;
                 for(i=0;i<12;i++){
                     $("#movie").append('<div class="movieview" >'+
-                            
+                            +'<div class="ex4">'+
                             '<div class="card img">'+
                              '<img class ="img1"src="'+result.data[i].image+'" />'+'</div>'+
                              '<div class="card name">'+
@@ -47,8 +47,8 @@
                              '<div class="card shot_description">'+
                              '<class ="shot_description">'+result.data[i].shot_description+'</div>'+
                              '<div class="card now_showing">'+
-                             '<class ="now_showing">'+result.data[i].now_showing+'</div>'+'</div>'   
-                                +'</div>'  +'</div>' +'</div>' 
+                             '<class ="now_showing">'+result.data[i].now_showing+'</div>'+'</div>'+'</div>' 
+                                 
                                
                     );
                 }
