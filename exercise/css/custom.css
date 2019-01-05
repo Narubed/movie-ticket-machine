@@ -3,12 +3,15 @@ body {
 	padding-top: 50px;
 	color: #959595;
 	
-		background-image: url("../img/loop3.jpg"); 
+		background-image: url("../img/loopnew.jpg"); 
 	}
 	
-h1, h2, h3, h4, h5, h6 {
+ h2, h3, h4, h5, h6 {
 	color: black;
+	}.h1{
+		color: #e22564; 
 	}
+
 	
 .feature {
 	background: rgb(15, 15, 15) linear-gradient(to bottom, #5e5eca, rgb(142, 220, 243));
@@ -99,10 +102,12 @@ h1, h2, h3, h4, h5, h6 {
 		/* ตัวหนังสือ */
 		
 		.name{
-		font-weight: 900;
-		}.card_name{
-			color: #0a5a32;
+	
+		color: #101110;
 			font-size: 5mm
+		}.card_name{
+				font-weight: 900;
+			
 		}
 		.price{
 			font-size: 5mm
@@ -111,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
 			font-weight: 900;
 		}
 		.shot_description{
-		color: #2525e2;
+		color: #19191a;
 			font-weight: 900;
 		}.card_shot_description{
 				font-size: 5mm
