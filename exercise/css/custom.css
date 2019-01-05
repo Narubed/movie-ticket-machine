@@ -102,3 +102,7 @@ h1, h2, h3, h4, h5, h6 {
 	.buttonback{
 		display: none;
 	}
+	.carousel-inner{
+		width:1140px;
+		height: 290px;
+	}
