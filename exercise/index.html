@@ -167,16 +167,17 @@
     <script>
         $(document).ready(function () {
             $.ajax({
+                type: 'GET',
+                dataType: 'json',
                 url: "http://www.mocky.io/v2/5bab559f3000006800a68762",
                 success: function (result) {
-
                     var i;
-
                     for (i = 0; i < 12; i++) {
-                        $("#movie").append('<div class="movieview" >' +
-                            '<article class="col-md-4 article-intro">' +
-                            
 
+                        $("#movie").append(
+                            '<a href="detail.html?id=' + result.data[i].id+ ' ">'+
+                            '<div class="movieview" >' +
+                            '<article class="col-md-4 article-intro">' +
                             '<div class="card img">' +
                             '<img class ="img1"src="' + result.data[i].image + '"/>' + '</div>' +
                             '<div class="card_name">' +
@@ -194,29 +195,30 @@
                              '<div class="buttonB">'+
                                 '<button type="button" class="button">ดูรายละเอียด</button>'+'</div>'+
                             '</article>' +
-                            '</div>'
+                            '</div>'+
+                            '</a>'
                         );
                     }
 
                 }
             });
         //  ปุ่มรายระเอียด
-            $('#movie').on("click", ".movieview", function () {
-                $(this).siblings().hide();
-                  $(".shot_description,.buttonback").show();
-                   $(this).find(".button").hide();
+            // $('#movie').on("click", ".movieview", function () {
+            //     $(this).siblings().hide();
+            //       $(".shot_description,.buttonback").show();
+            //        $(this).find(".button").hide();
                   
 
-                   //ปุ่มกลับไปสู่หน้าหลัก
-             });
+            //        //ปุ่มกลับไปสู่หน้าหลัก
+            //  });
 
-             $('.buttonback').click(function () {
+            //  $('.buttonback').click(function () {
                  
-                 $(".movieview").siblings().show();
-                 $(".shot_description,.buttonback").hide();
-                 $(".movieview").find(".button").show();
+            //      $(".movieview").siblings().show();
+            //      $(".shot_description,.buttonback").hide();
+            //      $(".movieview").find(".button").show();
 
-             });
+            //  });
         });
     </script>
 

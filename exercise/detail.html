@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+
+    <title>Corporate 2</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="row">
+
+        <a id="movie" class="row"> </a>
+
+        <button type="button" class="buttonback">กลับไปสู่หน้าหลัก</button>
+
+    </div>
+
+
+
+
+    <script>
+        $(document).ready(function () {
+
+            var param = GetParameterValues("id") - 1;
+
+            function GetParameterValues(param) {
+                var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+                for (var i = 0; i < url.length; i++) {
+                    var urlparam = url[i].split('=');
+                    if (urlparam[0] == param) {
+                        return urlparam[1];
+                    }
+                }
+            }
+
+
+
+            $.ajax({
+                type: 'GET',
+                dataType: 'json',
+                url: "http://www.mocky.io/v2/5bab559f3000006800a68762",
+                success: function (result) {
+                    $("#movie").html(
+                            '<div class="movieview" >' +
+                            '<article class="col-md-4 article-intro">' +
+                            '<div class="card img">' +
+                            '<img class ="img1"src="' + result.data[param].image + '"/>' + '</div>' +
+                            '<div class="card_name">' +
+                            '<class ="name">' + result.data[param].name + '</div>' +
+                            '<div class="card_price">' +
+                            '<class ="price">ราคา : ' + result.data[param].price + ' บาท</div>' +
+                            '<div class="shot_description">' +
+                           
+                             '<class ="card_shot_description">' + result.data[param].shot_description +
+                             '</div>' +
+
+                             '<div class="cerd_now_showing">' +
+                            ' <class ="now_showing">พร้อมรับชม :' + result.data[param].now_showing +'</div>'+
+                               
+                             '<div class="buttonB">'+
+                                '<button type="button" class="button">ดูรายละเอียด</button>'+'</div>'+
+                            '</article>' +
+                            '</div>'
+                            
+                    );
+                }
+
+            });
+        });
+    </script>
+
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport bug workaround -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <!-- Placeholder Images -->
+    <script src="js/holder.min.js"></script>
+    <!-- JS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+</body>
+
+</html>
