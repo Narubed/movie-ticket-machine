@@ -43,7 +43,7 @@
 
         <a id="movie" class="row"> </a>
 
-        <button type="button" class="buttonback">กลับไปสู่หน้าหลัก</button>
+        <button type="button" href="index.html" class="buttonback">กลับไปสู่หน้าหลัก</button>
 
     </div>
 
@@ -74,9 +74,9 @@
                 success: function (result) {
                     $("#movie").html(
                             '<div class="movieview" >' +
-                            '<article class="col-md-4 article-intro">' +
+                                '<center><h1>รายระเอียดของหนัง</h1><br> ' +
                             '<div class="card img">' +
-                            '<img class ="img1"src="' + result.data[param].image + '"/>' + '</div>' +
+                            '<img class ="img2"src="' + result.data[param].image + '"/>' + '</div>' +
                             '<div class="card_name">' +
                             '<class ="name">' + result.data[param].name + '</div>' +
                             '<div class="card_price">' +
@@ -90,8 +90,8 @@
                             ' <class ="now_showing">พร้อมรับชม :' + result.data[param].now_showing +'</div>'+
                                
                              '<div class="buttonB">'+
-                                '<button type="button" class="button">ดูรายละเอียด</button>'+'</div>'+
-                            '</article>' +
+                                '<button type="button" class="button">กลับไปสู่หน้าหลัก</button>'+'</div>'+
+                                '</center>' +
                             '</div>'
                             
                     );
