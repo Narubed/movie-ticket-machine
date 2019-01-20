@@ -92,6 +92,12 @@ body {
 		  font-size: 5mm
 
 		}
+		.shot_description1{
+		margin: auto;
+		width: 50%;
+		border: 3px solid green;
+		padding: 10px;
+	}
 		.img1{
 		  width:350px;
 			height: 350px;
