@@ -5,39 +5,24 @@
 <head>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-
     <title>Corporate 2</title>
-
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
     <link href="css/custom.css" rel="stylesheet">
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
-
-
 </head>
-
 <body>
-   
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
@@ -93,14 +78,11 @@
             <div id="feature-carousel" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                   <li data-target="#feature-carousel" data-slide-to="0" class="active">
-                
                   <li data-target="#feature-carousel" data-slide-to="1"></li>
                   <li data-target="#feature-carousel" data-slide-to="2"></li>
                   <li data-target="#feature-carousel" data-slide-to="3"></li>
                   <li data-target="#feature-carousel" data-slide-to="4"></li>
                 </ol>
-
-
                 <div class="carousel-inner" role="listbox">
                     <div class="item active">
                             <img class="d-block img-fluid" src="img/avengersnew.jpg" alt="First slide">
@@ -174,25 +156,23 @@
                 success: function (result) {
                     var i;
                     for (i = 0; i < 12; i++) {
-
                         $("#movie").append(
-
-                            '<a href="detail.html?id=' + result.data[i].id+ ' ">'+
+                            '<a href="detail.html?id=' + result.data[i].id+ ' ">'+//ส่งข้อมูลไปยังหน้าดีเทล
                             '<div class="movieview" >' +
-                            '<article class="col-md-4 article-intro">' +
+                            '<article class="col-md-4 article-intro">' +//กำหนดตารางวางข้อมูล
                             '<div class="card img">' +
-                            '<img class ="img1"src="' + result.data[i].image + '"/>' + '</div>' +
+                            '<img class ="img1"src="' + result.data[i].image + '"/>' + '</div>' +//ดึงรูป
                             '<div class="card_name">' +
-                            '<class ="name">' + result.data[i].name + '</div>' +
+                            '<class ="name">' + result.data[i].name + '</div>' +//ดึงชื่อ
                             '<div class="card_price">' +
-                            '<class ="price">ราคา : ' + result.data[i].price + ' บาท</div>' +
+                            '<class ="price">ราคา : ' + result.data[i].price + ' บาท</div>' +//ดึงราคา
                             '<div class="shot_description">' +
                            
-                             '<class ="card_shot_description">' + result.data[i].shot_description +
+                             '<class ="card_shot_description">' + result.data[i].shot_description +//ดึงข้อมูล
                              '</div>' +
 
                              '<div class="cerd_now_showing">' +
-                            ' <class ="now_showing">พร้อมรับชม :' + result.data[i].now_showing +'</div>'+
+                            ' <class ="now_showing">พร้อมรับชม :' + result.data[i].now_showing +'</div>'+//ดึงการเเสดง
                                
                              '<div class="buttonB">'+
                                 '<button type="button" class="button">ดูรายละเอียด</button>'+'</div>'+
@@ -210,7 +190,6 @@
             //       $(".shot_description,.buttonback").show();
             //        $(this).find(".button").hide();
                   
-
             //        //ปุ่มกลับไปสู่หน้าหลัก
             //  });
 
